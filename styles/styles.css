@@ -299,7 +299,35 @@
   background-color: linear-gradient();
 }
 
-.test {
+.test1 {
+  height: 100vh;
+  background-image: url(/images/wave.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.test1::before {
+  content: '';
+  background-image: url(/images/pattern.svg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  z-index: -1;
+}
+
+.test2 {
   height: 100vh;
   background-image: url(/images/waveTop.svg);
   background-position: top;
@@ -317,7 +345,7 @@
           align-items: flex-end;
 }
 
-.test::before {
+.test2::before {
   content: '';
   background-image: url(/images/pattern.svg);
   top: 0;
