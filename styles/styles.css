@@ -478,7 +478,7 @@
 
 .alemaniaMain {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-image: url(/images/frankfurt.png);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -554,9 +554,218 @@
           filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.377));
 }
 
-.footer {
+.beneficios {
+  height: auto;
+  width: 100%;
+  background-image: url(/images/waveTop.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.beneficios::before {
+  content: '';
+  background-image: url(/images/pattern.svg);
+  background-repeat: repeat;
+  background-size: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
+  z-index: -1;
+  position: absolute;
+}
+
+.beneficios h1 {
+  margin-top: 15rem;
+  font-size: 3rem;
+  color: #23222e;
+  text-align: center;
+}
+
+.beneficios__container {
+  width: 90%;
+  margin-top: 5rem;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 4rem;
+  grid-auto-rows: 6rem;
+  -ms-grid-columns: (minmax(15rem, 2fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 2fr));
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.beneficios__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.beneficios__card img {
+  width: 25%;
+}
+
+.beneficios__card p {
+  margin-top: 0.7rem;
+  text-align: center;
+  width: 70%;
+  color: #23222e;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.288);
+}
+
+.beneficios__btn {
+  margin-top: 4rem;
+  padding: 0.5rem 2rem;
+  outline: none;
+  border: 2px solid;
+  background-color: transparent;
+  border-radius: 10px;
+  border-color: #FA4545;
+}
+
+.beneficios__btn:hover {
+  background: linear-gradient(45deg, #FFAB48 0%, #FA4545 100%);
+  border-color: white;
+  color: white;
+}
+
+.beneficios__btn:hover a {
+  color: white;
+}
+
+.beneficios__btn a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #FA4545;
+}
+
+.requisitos {
+  height: auto;
+  background-image: url(/images/pattern.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.requisitos img {
+  width: 100%;
+}
+
+.requisitos h1 {
+  width: 95%;
+  margin: auto;
+  color: #2F2E41;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.144);
+}
+
+.requisitos__container {
+  width: 80%;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  color: #23222e;
+  gap: 2rem;
+}
+
+.requisitos__line {
+  width: 4px;
+  height: auto;
+  background: radial-gradient(#FFAB48, #FA4545);
+}
+
+.requisitos__content {
+  width: 100%;
+}
+
+.requisitos__content div {
+  margin-top: 2rem;
+}
+
+.requisitos__content div h2 {
+  color: #2F2E41;
+  font-weight: 600;
+}
+
+.requisitos__content div h2 div {
+  display: inline-block;
+  width: 20px;
+  height: 4px;
+  background: #FA4545;
+}
+
+.requisitos__content div h2 span {
+  font-weight: 800;
+  background: -webkit-linear-gradient(45deg, #FFAB48, #FA4545 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.requisitos__content div ul li {
+  width: 100%;
+  margin: 1rem auto 0 0rem;
+  list-style: none;
+}
+
+.requisitos__content div ul li::before {
+  content: "-";
+  color: #FA4545;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 1em;
+  margin-top: 5em 0 0 -1em;
+}
+
+.footer {
+  width: 100%;
+  height: 90vh;
   background-image: url(/images/neuschweinstein.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -573,10 +782,39 @@
           align-items: flex-end;
 }
 
+.footer ul li {
+  margin: 0.4rem auto;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.footer ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  height: 2px;
+  margin: -1px 0;
+  left: 0;
+  background-color: white;
+  -webkit-transition: all 0.4s ease-in 0s;
+  transition: all 0.4s ease-in 0s;
+}
+
+.footer ul li a:hover:after {
+  width: 100%;
+}
+
 .footer__info {
   width: 20%;
   list-style-type: none;
-  margin: 1em 0;
+  margin: 4em 0;
 }
 
 .footer__info li {
@@ -590,7 +828,7 @@
 .footer__nosotros {
   width: 20%;
   list-style-type: none;
-  margin: 1em 0;
+  margin: 4em 0;
 }
 
 .footer__nosotros li {
@@ -606,7 +844,7 @@
 .footer__data {
   width: 20%;
   list-style-type: none;
-  margin: 1em 0;
+  margin: 4em 0;
 }
 
 .footer__data li {
@@ -622,6 +860,7 @@
 .footer__redes {
   width: 10%;
   height: 104px;
+  margin: 4em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -771,6 +1010,10 @@
   }
   .alemaniaMain__image img {
     width: 80%;
+  }
+  .requisitos h1 {
+    width: 80%;
+    text-align: center;
   }
   .footer {
     -webkit-box-orient: vertical;
