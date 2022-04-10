@@ -8,64 +8,63 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-
-}
-
 .navbar {
     width: 100%;
     height:70px;
     display: flex;
-    align-items:flex-end;
-    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
     
-        &__container {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: bottom;
-            padding: 0 1em;
-        }
-
         &__logo {
-            width: 70%;
-            padding-left: 4em;
-            display: flex;
-            align-items: center;
+            
             img {
                 width: 150px;
+                filter: drop-shadow(1px 1px 1px rgba(44, 44, 44, 0.534));
+                transition: 0.4s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: 0.4s;
+                }
             }
+
         }
-        &__menu {
+
+        &__links {
             display: flex;
-            align-items: center;
-            img {
-                width: 30px;
-                filter: drop-shadow(2px 2px 1px rgba(44, 44, 44, 0.534));
-                
+            justify-content: space-around;
+            width: 40%;
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                color: #23222e;
+                text-decoration: none;
             }
         }
 
-        &__contact{
-            margin: 0 5px 0 0;
-            text-align: center;
-            color: white;
-            padding: 0.7em;
-            border-radius: 10px;
-            text-decoration: none;
-            background-image: linear-gradient( 45deg, #FFAB48 0%, #FA4545 100% );
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.377);
-            transition:.3s ease-in-out;
-            display: flex;
-            align-items: center;
+        &__burger {
 
-            &:hover {
-                box-shadow: none;
-                transition:.5s ease-in-out;
+            display: none;
+            cursor: pointer;
+
+            div {
+                margin: 5px;
+                width: 35px;
+                height: 5px;
+                background: #23222e;
+                border-radius: 5px;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.342);
             }
         }
+        
 }
+
+
+
 
 .main {
     width: 100%;
@@ -176,7 +175,7 @@ body {
         width: 25%;
         display: flex;
         justify-content: center;
-        overflow: hidden;
+
         img {
             width: 100%;
             filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.377));
@@ -436,6 +435,7 @@ body {
             position: absolute;
     }
     h1 {
+        width: 70%;
         margin-top: 15rem;
         font-size: 3rem;
         color: #23222e;
@@ -589,6 +589,15 @@ body {
                 }
             }
         }
+
+
+    }
+
+    p {
+        margin: 2rem auto;
+        color: #23222e;
+        width: 80%;
+        font-size: 1.2rem;
     }
 }
 
@@ -712,14 +721,33 @@ body {
 
 @media screen and (max-width: 767px) {
 
-    .navbar {
-        
-        &__logo {
-            width: 50%;
-            padding-left: 1em;
-            display: flex;
-            align-items: center;
+    body{
+        overflow-x: hidden;
     }
+
+    .navbar {
+        &__links {
+            position: absolute;
+            right: 0px;
+            height: 92vh;
+            top: 8vh;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            align-items: center;
+            width: 50%;
+            transform: translateX(100%);
+            transition: 0.5s ease-in;
+            z-index: 1;
+            li {
+                opacity: 0;
+            }
+        }
+
+        &__burger {
+            display: block;
+        }
+       
     }
 
     .main {
@@ -845,5 +873,22 @@ body {
             width: 70%;
             margin: 0.2em 0;
         }
+    }
+}
+
+
+
+.navbar__active {
+    transform: translateX(0%);
+}
+
+@keyframes navbarLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
