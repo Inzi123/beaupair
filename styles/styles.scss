@@ -8,6 +8,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+
 .logoopacity {
     opacity: 0;
 }
@@ -128,6 +130,8 @@
     position: fixed;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
     transition: 0.5s;
+    background: linear-gradient( #ffffff 40%, rgba(255, 255, 255, 0.37) 100%) ;
+    backdrop-filter: blur(5px);
 }
 
 
@@ -781,16 +785,41 @@
     }
 }
 
+.whatsapp {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: linear-gradient( #FFAB48 0%, #FA4545 90%);
+    position: fixed;
+    top: 85%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.507);
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.3s;
+
+    img {
+        width: 70%;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: none;
+    }
+}
+
 
 
 
 @media screen and (max-width: 767px) {
 
-    body{
-        overflow-x: hidden;
-    }
 
     .navbar {
+
+
         &__links {
             position: absolute;
             right: 0px;
@@ -805,6 +834,8 @@
             transform: translateX(100%);
             transition: 0.5s ease-in;
             z-index: 1;
+            display: none;
+
 
             li {
                 text-align: center;
@@ -954,6 +985,7 @@
 
 .navbar__active {
     transform: translateX(0%);
+    display: flex;
 }
 
 .toggle .line1 {

@@ -146,6 +146,10 @@
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #ffffff), to(rgba(255, 255, 255, 0.37)));
+  background: linear-gradient(#ffffff 40%, rgba(255, 255, 255, 0.37) 100%);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .main {
@@ -983,10 +987,44 @@
           filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.336));
 }
 
+.whatsapp {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFAB48), color-stop(90%, #FA4545));
+  background: linear-gradient(#FFAB48 0%, #FA4545 90%);
+  position: fixed;
+  top: 85%;
+  right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.507);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.507);
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.whatsapp img {
+  width: 70%;
+}
+
+.whatsapp:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 @media screen and (max-width: 767px) {
-  body {
-    overflow-x: hidden;
-  }
   .navbar__links {
     position: absolute;
     right: 0px;
@@ -1012,6 +1050,7 @@
     -webkit-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
     z-index: 1;
+    display: none;
   }
   .navbar__links li {
     text-align: center;
@@ -1163,6 +1202,9 @@
 .navbar__active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .toggle .line1 {
