@@ -811,6 +811,9 @@
     }
 }
 
+.whatsappmenu {
+    display: none;
+}
 
 
 
@@ -819,6 +822,7 @@
 
     .navbar {
 
+        background: white;
 
         &__links {
             position: absolute;

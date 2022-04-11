@@ -1024,7 +1024,14 @@
           box-shadow: none;
 }
 
+.whatsappmenu {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
+  .navbar {
+    background: white;
+  }
   .navbar__links {
     position: absolute;
     right: 0px;
