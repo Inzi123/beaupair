@@ -37,3 +37,4 @@ $(window).scroll(function(){
         $(".navbar").removeClass("floatingnav");
     }
 });
+
