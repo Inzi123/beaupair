@@ -29,6 +29,7 @@
   position: static;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  position: fixed;
 }
 
 .navbar__logo {
