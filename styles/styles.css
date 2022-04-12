@@ -1269,7 +1269,7 @@
 
 .form__right form div .form__field:focus ~ .form__label {
   position: absolute;
-  top: 0;
+  top: -10px;
   display: block;
   -webkit-transition: 0.2s;
   transition: 0.2s;
