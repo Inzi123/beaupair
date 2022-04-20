@@ -1367,10 +1367,24 @@
 /* Fin de formulario */
 /* Principio de Nosotros */
 .nosotros {
+  margin: 0;
+  padding: 8em 5em 20em 5em;
+  background-image: url(/images/wave.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nosotros::before {
+  content: '';
   background-image: url(/images/pattern.svg);
   background-repeat: repeat;
   background-size: 100%;
-  padding: 10em 5em 0 5em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .nosotros div {
@@ -1381,18 +1395,26 @@
 }
 
 .nosotros h1 {
+  margin-top: 2rem;
   font-size: 3rem;
   color: #23222e;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
 }
 
 .nosotros P {
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
   font-size: 1.1rem;
 }
 
 /* Fin de nosotros */
 @media screen and (max-width: 767px) {
+  .nosotros {
+    padding: 10em 1em 0 1em;
+    text-align: center;
+  }
+  .nosotros div {
+    margin: auto;
+  }
   .navbar {
     background: white;
   }
