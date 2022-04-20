@@ -8,7 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
+/* Principio de navbar */
 
 .logoopacity {
     opacity: 0;
@@ -135,10 +135,14 @@
     backdrop-filter: blur(5px);
 }
 
+/* Fin de navbar */
+
+
+/* Principio de index */
 
 .main {
     width: 100%;
-    height: 100vh;
+    height: auto;
     padding: 5em 5em;
     display: flex;
     flex-direction: row;
@@ -360,6 +364,8 @@
 
         p {
             text-align: center;
+            width: 95%;
+            font-size: 0.9rem;
         }
 
         &:hover {
@@ -419,6 +425,10 @@
             z-index: -1;
     }
 }
+
+/* Fin de index */
+
+/* Principio de Germany */
 
 .alemaniaMain {
     width: 100%;
@@ -670,6 +680,10 @@
     }
 }
 
+/* Fin de Germany */
+
+/* Principio de footer */
+
 .footer {
     width: 100%;
     height: 50vh;
@@ -785,6 +799,11 @@
     }
 }
 
+/* Fin de footer */
+
+
+/* Principio de link de whatsapp */
+
 .whatsapp {
     width: 60px;
     height: 60px;
@@ -815,6 +834,10 @@
     display: none;
 }
 
+/* Fin de link de whatsapp */
+
+/* Principio de formulario */
+
 .form {
     width: 100%;
     height: 100vh;
@@ -828,7 +851,8 @@
     &__card {
         display: flex;
         width: 60%;
-        height: 70%;
+        height: 90%;
+        margin-top: 10rem;
         background: rgb(255, 255, 255);
         background-image: url(/images/pattern.svg);
         background-repeat: repeat;
@@ -1042,9 +1066,35 @@
     }
 }
 
+/* Fin de formulario */
 
+/* Principio de Nosotros */
 
+.nosotros {
+    background-image: url(/images/pattern.svg);
+        background-repeat: repeat;
+        background-size: 100%;
+    padding: 10em 5em 0 5em;
 
+    div {
+        width: 80%;
+        height: 3px;
+        background: linear-gradient( #FFAB48, #FA4545 );
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: #23222e;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
+    }
+
+    P {
+        margin: 2rem auto;
+        font-size: 1.1rem;
+    }
+}
+
+/* Fin de nosotros */
 
 @media screen and (max-width: 767px) {
 

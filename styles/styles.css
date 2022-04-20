@@ -8,6 +8,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* Principio de navbar */
 .logoopacity {
   opacity: 0;
 }
@@ -153,9 +154,11 @@
           backdrop-filter: blur(5px);
 }
 
+/* Fin de navbar */
+/* Principio de index */
 .main {
   width: 100%;
-  height: 100vh;
+  height: auto;
   padding: 5em 5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -464,6 +467,8 @@
 
 .process__card p {
   text-align: center;
+  width: 95%;
+  font-size: 0.9rem;
 }
 
 .process__card:hover {
@@ -533,6 +538,8 @@
   z-index: -1;
 }
 
+/* Fin de index */
+/* Principio de Germany */
 .alemaniaMain {
   width: 100%;
   height: 80vh;
@@ -841,6 +848,8 @@
   font-size: 1.2rem;
 }
 
+/* Fin de Germany */
+/* Principio de footer */
 .footer {
   width: 100%;
   height: 50vh;
@@ -987,6 +996,8 @@
           filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.336));
 }
 
+/* Fin de footer */
+/* Principio de link de whatsapp */
 .whatsapp {
   width: 60px;
   height: 60px;
@@ -1028,6 +1039,8 @@
   display: none;
 }
 
+/* Fin de link de whatsapp */
+/* Principio de formulario */
 .form {
   width: 100%;
   height: 100vh;
@@ -1053,7 +1066,8 @@
   display: -ms-flexbox;
   display: flex;
   width: 60%;
-  height: 70%;
+  height: 90%;
+  margin-top: 10rem;
   background: white;
   background-image: url(/images/pattern.svg);
   background-repeat: repeat;
@@ -1350,6 +1364,34 @@
   margin-right: 1rem;
 }
 
+/* Fin de formulario */
+/* Principio de Nosotros */
+.nosotros {
+  background-image: url(/images/pattern.svg);
+  background-repeat: repeat;
+  background-size: 100%;
+  padding: 10em 5em 0 5em;
+}
+
+.nosotros div {
+  width: 80%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFAB48), to(#FA4545));
+  background: linear-gradient(#FFAB48, #FA4545);
+}
+
+.nosotros h1 {
+  font-size: 3rem;
+  color: #23222e;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
+}
+
+.nosotros P {
+  margin: 2rem auto;
+  font-size: 1.1rem;
+}
+
+/* Fin de nosotros */
 @media screen and (max-width: 767px) {
   .navbar {
     background: white;
