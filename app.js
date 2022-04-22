@@ -1,14 +1,13 @@
+
 const navSlide = () => {
     const burger = document.querySelector('.navbar__burger');
     const nav = document.querySelector('.navbar__links');
     const navLinks = document.querySelectorAll('.navbar__links li');
     const logo = document.querySelector('.navbar__logo');
-    const wpp = document.querySelector('.whatsapp')
 
     burger.addEventListener('click', () => {
         nav.classList.toggle('navbar__active');
         logo.classList.toggle('logoopacity');
-        wpp.classList.toggle('whatsappmenu');
 
         navLinks.forEach((link, index) =>{
             if(link.style.animation){
@@ -23,8 +22,6 @@ const navSlide = () => {
     });
 
 
-
-
 };
 
 navSlide();
@@ -37,4 +34,3 @@ $(window).scroll(function(){
         $(".navbar").removeClass("floatingnav");
     }
 });
-
