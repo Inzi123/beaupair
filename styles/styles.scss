@@ -1110,6 +1110,10 @@
     background-size: contain;
     text-align: center;
 
+    img {
+        width: 40%;
+        filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.315));
+    }
 
     &::before {
         content: '';
@@ -1484,6 +1488,10 @@
     .nosotros {
         padding: 10em 1em 10em 1em;
         text-align: center;
+
+        img {
+            width: 100%;
+        }
 
         div {
             margin: auto;
