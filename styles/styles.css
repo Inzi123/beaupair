@@ -887,18 +887,18 @@
   z-index: 2;
 }
 
-.footer ul li {
+.footer .footer__nosotros li {
   margin: 0.4rem auto;
 }
 
-.footer ul li a {
+.footer .footer__nosotros li a {
   color: white;
   text-decoration: none;
   display: inline-block;
   position: relative;
 }
 
-.footer ul li a:after {
+.footer .footer__nosotros li a:after {
   content: "";
   display: block;
   position: absolute;
@@ -912,7 +912,7 @@
   transition: all 0.4s ease-in 0s;
 }
 
-.footer ul li a:hover:after {
+.footer .footer__nosotros li a:hover:after {
   width: 100%;
 }
 
@@ -1074,6 +1074,7 @@
   height: 100vh;
   background-image: url(/images/formbg.png);
   background-size: cover;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1095,7 +1096,7 @@
   display: flex;
   width: 60%;
   height: 90%;
-  margin-top: 10rem;
+  margin-top: 5rem;
   background: white;
   background-image: url(/images/pattern.svg);
   background-repeat: repeat;
@@ -1393,6 +1394,33 @@
 }
 
 /* Fin de formulario */
+.privacy {
+  padding: 5em 7em 20rem 7em;
+  background-image: url(/images/wave.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.privacy P {
+  margin: 2rem auto 0 auto;
+  font-size: 1.1rem;
+  width: 85%;
+}
+
+.privacy h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  color: #23222e;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
+}
+
+.privacy li {
+  margin: 0 auto;
+  font-size: 1.1rem;
+  width: 75%;
+}
+
 /* Principio de Nosotros */
 .nosotros {
   padding: 5em 5em 20rem 5em;
@@ -1442,10 +1470,11 @@
   width: 85%;
 }
 
-.nosotros ul {
+/* Fin de nosotros */
+.sideRedes {
   position: fixed;
   top: 40vh;
-  left: 5vh;
+  left: 2vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1457,22 +1486,41 @@
   z-index: 0;
 }
 
-.nosotros ul li {
+.sideRedes li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 100%;
   list-style: none;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
+  width: 3rem;
+  height: 3rem;
 }
 
-.nosotros ul li:hover {
+.sideRedes li:hover {
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
 }
 
-.nosotros ul li a img {
+.sideRedes li a {
   width: 1.8rem;
+  height: 1.8rem;
 }
 
-/* Fin de nosotros */
+.sideRedes li a img {
+  width: 1.8rem;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.411));
+          filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.411));
+}
+
 /* Inicio de blog */
 .blog {
   width: 100%;
@@ -1518,10 +1566,8 @@
 }
 
 .blog__left ul li {
-  padding: 0.6rem;
   margin: 1rem 0 0 0;
   list-style: none;
-  background: white;
   -webkit-filter: none;
           filter: none;
   display: -webkit-box;
@@ -1533,9 +1579,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 100%;
-  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.404);
-          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.404);
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
@@ -1543,6 +1586,23 @@
 .blog__left ul li:hover {
   -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
+}
+
+.blog__left ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.404);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.404);
+  padding: 0.6rem;
 }
 
 .blog__left ul li img {
@@ -1870,6 +1930,19 @@
 
 /* Fin de blog */
 @media screen and (max-width: 767px) {
+  .privacy {
+    padding: 10em 1em 10em 1em;
+    text-align: center;
+  }
+  .privacy img {
+    width: 100%;
+  }
+  .privacy div {
+    margin: auto;
+  }
+  .privacy ul {
+    text-align: left;
+  }
   .nosotros {
     padding: 10em 1em 10em 1em;
     text-align: center;
@@ -2010,6 +2083,9 @@
   .process__card {
     margin: 1.5em 0;
     width: 85%;
+  }
+  .sideRedes {
+    display: none;
   }
   .alemaniaMain {
     -webkit-box-orient: vertical;
